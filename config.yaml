@@ -1,0 +1,23 @@
+---
+name: sample_data
+columnHeaders: true
+currentTablePath: target\output\data_current
+newTablePath: target\output\data_new
+#history_table_path: file:///tmp/sample_data_history
+#extract_type: full
+columnsMetadata:
+- name: Serial Number
+  key: true
+  ignore: false
+- name: Company Name
+  key: false
+  ignore: false
+- name: Employee Markme
+  key: false
+  ignore: false
+- name: Description
+  key: false
+  ignore: false
+- name: Leave
+  key: false
+  ignore: false  
