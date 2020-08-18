@@ -17,6 +17,8 @@ public class Configuration {
 	
 	private String newTablePath;
 	
+	private String outputCSVPathPrefix;
+	
 	private List<ColumnMetadata> columnsMetadata;
 
 	public String getName() {
@@ -57,6 +59,14 @@ public class Configuration {
 
 	public void setNewTablePath(String newTablePath) {
 		this.newTablePath = newTablePath;
+	}
+
+	public String getOutputCSVPathPrefix() {
+		return outputCSVPathPrefix;
+	}
+
+	public void setOutputCSVPathPrefix(String outputCSVPathPrefix) {
+		this.outputCSVPathPrefix = outputCSVPathPrefix;
 	}
 }
 

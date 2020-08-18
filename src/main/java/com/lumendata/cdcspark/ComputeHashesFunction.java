@@ -13,13 +13,13 @@ import org.apache.spark.sql.RowFactory;
  * @author vinay.mulakkayala@lumendata.com
  *
  */
-public class PreprocessFunction implements Function<Row, Row> {
+public class ComputeHashesFunction implements Function<Row, Row> {
 
 	private static final long serialVersionUID = 2625706620240718439L;
 	
 	private List<ColumnMetadata> columnsMetadata;
 	
-	public PreprocessFunction(List<ColumnMetadata> columnsMetadata) {
+	public ComputeHashesFunction(List<ColumnMetadata> columnsMetadata) {
 		this.columnsMetadata = columnsMetadata;
 	}
 

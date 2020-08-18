@@ -1,0 +1,26 @@
+---
+name: book catalog
+columnHeaders: true
+currentTablePath: target/output-test/data_current
+newTablePath: target/output-test/data_new
+outputCSVPathPrefix: target/output-test/csv_output
+
+columnsMetadata:
+- name: ISBN-10
+  key: true
+  ignore: false
+- name: Title
+  key: false
+  ignore: true
+- name: Author
+  key: false
+  ignore: true
+- name: Publisher
+  key: false
+  ignore: false
+- name: Price
+  key: false
+  ignore: false  
+- name: Qty in Stock
+  key: false
+  ignore: false  
