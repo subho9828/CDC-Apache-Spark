@@ -158,7 +158,6 @@ public class CDCSparkApplication {
 		return SparkSession.
 			builder().
 			appName(appName).
-			master("local").
 			getOrCreate();
 	}
 	

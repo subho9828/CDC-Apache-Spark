@@ -4,6 +4,9 @@ import java.util.List;
 
 /**
  * 
+ * NOTE: see sample config file in test resources folder
+ * src/test/resources/sanitytest/config-book-catalog.yaml
+ * 
  * @author vinay.mulakkayala@lumendata.com
  *
  */

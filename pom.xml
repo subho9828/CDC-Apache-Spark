@@ -30,12 +30,14 @@
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-core_2.12</artifactId>
 			<version>${apache.spark.version}</version>
+			<scope>provided</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-sql_2.12</artifactId>
 			<version>${apache.spark.version}</version>
+			<scope>provided</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
 		<dependency>
@@ -132,6 +134,42 @@
 					</includes>
 				</configuration>
 			</plugin>
+			<plugin>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>3.2.0</version>
+			<executions>
+				<execution>
+					<id>default-jar</id>
+					<phase>none</phase>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<version>3.2.0</version>
+			<executions>
+				<execution>
+					<id>make-assembly</id>
+					<phase>package</phase>
+					<goals>
+						<goal>single</goal>
+					</goals>
+				</execution>
+			</executions>
+			<configuration>
+				<!-- ... -->
+				<finalName>${project.artifactId}-${project.version}</finalName>
+				<appendAssemblyId>true</appendAssemblyId>
+				<archive>
+					<manifest>
+						<mainClass>com.lumendata.cdcspark.CDCSparkApplication</mainClass>
+					</manifest>
+				</archive>
+				<descriptorRefs>
+            		<descriptorRef>jar-with-dependencies</descriptorRef>
+          		</descriptorRefs>
+			</configuration>
+		</plugin>
 		</plugins>
 	</build>
 	
